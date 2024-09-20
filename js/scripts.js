@@ -29,6 +29,10 @@ const saveTodo = (texto) => {
     todo.classList.add("todo")
     const todoTitle = document.createElement("h3")
     todoTitle.innerText = texto
+    todoTitle.style.maxWidth = "100%";  // Garante que o título não ultrapasse o tamanho do container
+    todoTitle.style.overflow = "hidden";  // Esconde o texto que ultrapassa o limite, se necessário
+    todoTitle.style.wordWrap = "break-word";  // Quebra o texto se necessário
+    todoTitle.style.whiteSpace = "normal";  // Permite quebras de linha se o texto for muito longo
     todo.appendChild(todoTitle)
     const doneBtn = document.createElement("button")
     doneBtn.classList.add("finish-todo")
