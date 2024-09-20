@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 //seleção de elementos
 const todoForm = document.querySelector('#todo-form');
 const todoInput = document.querySelector('#todo-input');
